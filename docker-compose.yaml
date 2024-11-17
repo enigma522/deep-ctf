@@ -1,0 +1,16 @@
+version: '3.7'
+
+services:
+  deep:
+    build:
+      context: deep/src
+      args:
+        FLAG: "Securinets{redacted}"
+    restart: unless-stopped
+    environment:
+      - SUPABASE_URL=https://xyzcompany.supabase.co
+      - SUPABASE_ANON_KEY=yelatif
+    ports:
+      - "80:80"
+
+
